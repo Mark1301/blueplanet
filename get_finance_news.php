@@ -4,21 +4,21 @@
 
         $response = array();
 
-        $conn = new mysqli( "localhost", "news-admin", "JayMehta123#", "news_storage" );
+        $conn = new mysqli( "localhost", "Mark1301", "utsav1099", "BLUE" );
 
         $lastMewsId =  ( int ) $_GET[ "id" ];
 
         if( $lastMewsId == -1 ) {
-            
+
             $sql = "SELECT
-                        `finance_news`.`id`, 
-                        `finance_news`.`title`, 
-                        `finance_news`.`url`,
-                        `finance_news`.`date`, 
-                        `finance_news`.`img_url`
+                        `blueplanet_News`.`id`,
+                        `blueplanet_News`.`title`,
+                        `blueplanet_News`.`url`,
+                        `blueplanet_News`.`date`,
+                        `blueplanet_News`.`img_url`
                         FROM
-                        `finance_news`
-                        ORDER BY `finance_news`.`id` DESC
+                        `blueplanet_News`
+                        ORDER BY `blueplanet_News`.`id` DESC
                         LIMIT 20";
 
         } else {
@@ -26,20 +26,20 @@
             $el = ( int )( $lastMewsId - 1 );
             $sl = ( int )( $lastMewsId - 21 );
             $sql = "SELECT
-                    `finance_news`.`id`, 
-                    `finance_news`.`title`, 
-                    `finance_news`.`url`,
-                    `finance_news`.`date`, 
-                    `finance_news`.`img_url`
+                    `blueplanet_News`.`id`,
+                    `blueplanet_News`.`title`,
+                    `blueplanet_News`.`url`,
+                    `blueplanet_News`.`date`,
+                    `blueplanet_News`.`img_url`
                     FROM
-                    `finance_news`
+                    `blueplanet_News`
                     WHERE
-                    `finance_news`.`id`
+                    `blueplanet_News`.`id`
                     BETWEEN
                     $sl AND $el
-                    ORDER BY `finance_news`.`id` DESC
+                    ORDER BY `blueplanet_News`.`id` DESC
                     ";
-            
+
         }
 
         $result = mysqli_query($conn, $sql);
