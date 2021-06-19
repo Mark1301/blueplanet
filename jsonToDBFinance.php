@@ -4,7 +4,7 @@ include "./library/simple_html_dom.php";
 
 date_default_timezone_set("Asia/Kolkata");
 
-$conn = new mysqli("localhost", "Mark1301", "utsav1099", "BLUE");
+$conn = new mysqli("localhost", "blueplanet", "Bluepl@net2021", "BLUE");
 
 if ($conn->connect_error) {
 
