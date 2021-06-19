@@ -4,7 +4,7 @@
 
         $response = array();
 
-        $conn = new mysqli( "localhost", "Mark1301", "utsav1099", "BLUE" );
+        $conn = new mysqli( "localhost", "blueplanet", "Bluepl@net2021", "BLUE" );
 
         $lastMewsId =  ( int ) $_GET[ "id" ];
 
